@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GIFMONSTER</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Send annotated GIFs by text message">
+
+  <%= stylesheet_link_tag  'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag  'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+ <%= stylesheet_link_tag   'http://ufonts.com/fonts/superclarendon-rg.html' %>
+<%= stylesheet_link_tag    'application', media: 'all' %>
+
+
+<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" %>
+<%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
+<%= javascript_include_tag 'application'%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'layouts/nav' %>
+<%= yield %>
+</div>
+</body>
+</html>
