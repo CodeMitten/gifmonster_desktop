@@ -14,3 +14,31 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//
+
+var ready;
+ready = function() {
+  var eye = $(".eye");
+  var box = eye.children("img");
+  boxCenter=[box.offset().left+box.width()/2, box.offset().top+box.height()/2+241];
+
+  $(document).mousemove(function(e){
+
+
+    var angle = Math.atan2(e.pageX- boxCenter[0],- (e.pageY- boxCenter[1]) )*(180/Math.PI);
+    console.log('pagex' + e.pageX);
+    console.log(e.pageY);
+    console.log(boxCenter);
+    console.log(angle);
+      box.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});
+      box.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+      box.css({ 'transform': 'rotate(' + angle + 'deg)'});
+
+  });
+
+
+};
+
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
