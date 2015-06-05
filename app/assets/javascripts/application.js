@@ -20,7 +20,7 @@ var ready;
 ready = function() {
   var eye = $(".eye");
   var box = eye.children("img");
-  boxCenter=[box.offset().left+box.width()/2, box.offset().top+box.height()/2+241];
+  boxCenter=[box.offset().left+box.width()/2, box.offset().top+box.height()/2+225];
 
   $(document).mousemove(function(e){
 
